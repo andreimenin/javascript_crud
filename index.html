@@ -1,0 +1,50 @@
+<!DOCTYPE html charset="UTF-8">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Operações CRUD JavaScript</title>
+    <link type="text/css" rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <table style="table-layout: fixed; width: 100%">
+        <tr>
+            <td style="vertical-align: top; width: 30%;">
+                <form autocomplete="off" onsubmit="onFormSubmit()">                     
+                    <div>
+                        <label for "name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label for "age">Idade</label>
+                        <input min="0" oninput="this.value = Math.abs(this.value)" type="number" name="age" id="age">
+                    </div>                 
+                    <div class="form_action--button">
+                        <input type="submit" value="Enviar">                        
+                        <button onclick="resetForm()">Limpar</button>
+                    </div>
+                </form>
+
+                <td style="vertical-align: top;">
+                    <table class="list" id="peopleList">
+                        <thead>
+                            <th style="width: 32%;">Nome</th>
+                            <th style="cursor: pointer; width: 32%;">Idade</th>
+                            <th style="width: 26%;">Ações</th>                            
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+
+
+
+</html>
+
+
+
